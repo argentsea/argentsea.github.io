@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html id="root" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>ArgentSea</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" href="/images/favicon.ico">
+    <link rel="manifest" href="/images/manifest.json">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#FFFFFF">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="navitem">ArgentSea</div>
+        <div class="navitem">FAQs</div>
+        <div class="navitem">Docs</div>
+        <div class="navitem">Source</div>
+        <div class="navitem">Blog</div>
+    </div>
+    <div id="heading">
+        <div id="headingLogo">
+            <img src="images/ArgentSea.jpg" />
+        </div>
+        <div id="headingTitle">ArgentSea</div>
+    </div>
+    <div id="headingDescription">Argent Sea is a free, open source framework for accessing databases, built for simplicity, high-performance and global scale.</div>
+    <div style="height:25px"></div>
+    <div class="featureSections">
+        <div class="featureSection">
+            <img class="featureIcon" src="images/sharding.svg" />
+            <div id="sctLearn" class="featureTitle">Sharding</div>
+        </div>
+        <div class="featureSection">
+            <img class="featureIcon" src="images/mapping.svg" />
+            <div id="sctConnect" class="featureTitle">Mapping</div>
+        </div>
+        <div class="featureSection">
+            <img class="featureIcon" src="images/properties.svg" />
+            <div id="sctSchedule" class="featureTitle">Configuration</div>
+        </div>
+        <div class="featureSection">
+            <img class="featureIcon" src="images/resilience.svg" />
+            <div id="sctSchedule" class="featureTitle">Resilience</div>
+        </div>
+        <div class="featureSection">
+            <img class="featureIcon" src="images/performance.svg" />
+            <div id="sctSchedule" class="featureTitle">Performance</div>
+        </div>
+        <div class="featureSection">
+            <img class="featureIcon" src="images/Tooling.svg" />
+            <div id="sctSchedule" class="featureTitle">Tooling</div>
+        </div>
+    </div>
+    <hr />
+    <div class="paradigmTitle">Supported databases</div>
+    <div class="homeContentSections">
+        <div class="homeContentSection">
+            <img class="dbIcon" src="images/sql-server-h.svg" />
+            <div class="homeContentItem">• Sql Server 2017</div>
+            <div class="homeContentItem">• Sql Server Express</div>
+            <div class="homeContentItem">• Azure Sql Database</div>
+        </div>
+        <div class="homeContentSection">
+            <img class="dbIcon" src="images/postgresql-h.svg" />
+            <div class="homeContentItem">• PostgreSQL database</div>
+            <div class="homeContentItem">• Amazon RDS for PostgreSQL</div>
+            <div class="homeContentItem">• Azure Database for PostgreSQL</div>
+            <div class="homeContentItem">• Google Cloud Sql for PostgreSQL</div>
+        </div>
+    </div>
+    <hr />
+    <div class="paradigm">
+        <div class="paradigmTitle">Paradigm Shifty</div>
+        <div class="paradigmSections">
+            <div class="paradigmSection">
+                <div class="paradigmGroup">
+                    <img class="couplingIcon" src="images/tightly-coupled.svg" />
+                    <div>
+                        <div class="homeContentTitle">Tight Coupling</div>
+                        <div class="homeContentItem">
+                                Although it might sound nice, “tight coupling” isn’t a good thing in software design. It happens when one system’s integration with another system depends on the internal implementation of the other system. Usually the result of haphazard design, it make it nearly impossible to switch to a different provider.
+                            <p>
+                                Like, say, when accessing your database layer depends upon how tables and columns are implemented.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paradigmSection">
+                <div class="paradigmGroup">
+                    <img class="couplingIcon" src="images/loosely-coupled.svg" />
+                    <div>
+                        <div id="sctLearn" class="homeContentTitle">Loose Coupling</div>
+                        <div class="homeContentItem">
+                                “Loosely coupled” systems have well-defined interfaces. You can change the implementation as long as you maintain the interface contract.
+                            <p>
+                                These systems are more robust, testable, and manageable — and those are good things.
+                            </p><p>
+                                For example, using stored procedures allows you to change the underlying database structures, but as long as the same results are returned you will not break the application.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id="sprocTitle">Stored procedures</div>
+        <div id="sprocDesc">
+                Stored procedures enable loose coupling between the app domain and the data domain. They generally perform better and offer better security too.
+                This is why ArgentSea was built to work with stored procedures.
+            <p>
+                Do data-domain work in SQL and your application work in .NET. That is how you build a maintainable high-performance application. (If you prefer to work in C# and have your ORM handle data for you automagically, there are several other great options for you).
+            </p>
+        </div>
+    </div>
+    <hr />
+    <div class="paradigmTitle">What’s new</div>
+    <div class="whatsNew">
+        <ul>
+            <li>The ArgentSea library is in alpha phase.</li>
+            <li>All current tests are passing.</li>
+            <li>Building documentation.</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>
+            ArgentSea ©2018 John Hicks and other contributors
+        </p><p>
+            It is available for use and modification under the MIT License.
+        </p>
+    </div>
+</body>
+</html>
