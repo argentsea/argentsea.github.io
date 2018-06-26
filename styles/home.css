@@ -16,13 +16,24 @@ hr {
 .navbar {
   display: flex;
   flex-flow: row;
-  background-color: silver;
-  color: white; }
+  background-color: black;
+  border-bottom: 1px solid silver;
+  color: white;
+  height: 25px; }
 
 .navitem {
   flex-grow: 0;
   flex-shrink: 0;
   width: 100px; }
+
+.navitem > a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border: 1px solid black; }
+
+.navitem > a:hover {
+  border: 1px solid silver; }
 
 #heading {
   background-color: black;

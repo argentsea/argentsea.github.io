@@ -22,8 +22,10 @@ hr {
 .navbar {
     display: flex;
     flex-flow: row;
-    background-color: silver;
+    background-color: black;
+    border-bottom: 1px solid silver;
     color: white;
+    height: 25px;
 }
 
 .navitem {
@@ -31,6 +33,16 @@ hr {
     flex-shrink: 0;
     width: 100px;
 }
+.navitem > a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 1px solid black;
+}
+.navitem > a:hover {
+    border: 1px solid silver;
+}
+
 #heading {
     background-color: black;
     font-family: $subTitleFont;
