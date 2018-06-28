@@ -20,12 +20,13 @@ hr {
 }
 
 .navbar {
+    padding-top: 5px;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     background-color: black;
     border-bottom: 1px solid silver;
     color: white;
-    height: 25px;
+    padding-bottom: 8px;
 }
 
 .navitem {
@@ -42,6 +43,14 @@ hr {
 .navitem > a:hover {
     border: 1px solid silver;
 }
+.navLogo {
+    height: 22px;
+    padding: 0;
+    padding-right: 50px;
+    margin: 0;
+    width: 110px;
+}
+
 
 #heading {
     background-color: black;
@@ -67,15 +76,25 @@ hr {
     font-size: 3rem;
     text-align: center;
 }
-
+#headingAsLogo {
+    width: 300px;
+}
 #headingDescription {
     background-color: black;
     color: #A0A0A0;
-    font-size: 1rem;
     text-align: center;
+    font-size: .9rem;
     padding-bottom: 15px;
 }
-
+#headingTag {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 50%;
+    color: #A0A0A0;
+    font-size: .9rem;
+    display: none;
+}
 .bottomPage {
     background-color: black;
     height: 40px;
@@ -87,13 +106,36 @@ hr {
 }
 
 .featureSections {
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-shrink: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+//    display: flex;
+//    flex-flow: row wrap;
+//    justify-content: space-around;
 }
+
+.featureItem {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+.featureItemTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+}
+.featureItemDesc {
+//
+}
+.featureIcon {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+
+/*/////////////////
 featureSection {
     padding-top: 15px;
     flex-grow: 0;
@@ -107,6 +149,11 @@ featureSection {
     color: black;
     text-align: center;
 }
+/////////////////*/
+
+
+
+
 .homeContentSections {
     //background-color: white;
     /*flex-grow: 0;*/
@@ -139,12 +186,16 @@ featureSection {
     flex-grow: 1;
     flex-shrink: 1;
 }
-.paradigmTitle {
+.sectionTitle {
     font-family: $subTitleFont;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
     color: dimgray;
+    padding-bottom: 10px;
+}
+.paradigm {
+    padding: 5px;
 }
 .paradigmSections {
     padding-left: 10px;
@@ -176,10 +227,6 @@ featureSection {
 .paradigm {
 //    background-color: gainsboro;
 }
-.featureIcon {
-    height: 120px;
-    width: 120px;
-}
 #sprocTitle {
     font-family: $subTitleFont;
     font-weight: bold;
@@ -207,4 +254,31 @@ featureSection {
         width: 49%;
         flex-direction: row;
     }
+    .featureIcon {
+        width: 120px;
+        height: 120px;
+        padding-right: 20px;
+    }
+    .featureSections {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .paradigm {
+        padding: 30px;
+    }
+}
+@media (min-width: 980px) {
+    #headingDescription {
+        display: none;
+    }
+    #headingTag {
+        display: block;
+    }
+}
+
+.question { 
+    font-weight: bold;
+}
+.answer {
+    //
 }

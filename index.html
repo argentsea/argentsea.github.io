@@ -12,48 +12,102 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="navitem">ArgentSea</div>
-        <div class="navitem"><a href="/faqs.htm">FAQs</a></div>
+        <div class="navLogo"><a href="http://www.argentsea.com/index.html"><img id="menuLogo" src="images/argentsealogo-white.svg" /></a></div>
+        <div class="navitem"><a href="/faq.htm">FAQs</a></div>
         <div class="navitem"><a href="http://docs.argentsea.com">Docs</a></div>
         <div class="navitem"><a href="https://www.github.com/argentsea/">Source</a></div>
-        <div class="navitem"><a href="http://www.compte.com">Blog</a></div>
+        <!--div class="navitem"><a href="http://www.compte.com">Blog</a></div-->
     </div>
     <div id="heading">
         <div id="headingLogo">
             <img src="images/ArgentSea.jpg" />
         </div>
-        <div id="headingTitle">ArgentSea</div>
+        <div id="headingTitle"><img id="headingAsLogo" src="images/argentsealogo-gray.svg" /></div>
     </div>
-    <div id="headingDescription">Argent Sea is a free, open source framework for accessing databases, built for simplicity, high-performance and global scale.</div>
+    <div id="headingTag">Argent Sea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
+    <div id="headingDescription">Argent Sea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
     <div style="height:25px"></div>
+    <div class="sectionTitle">Features</div>
     <div class="featureSections">
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/sharding.svg" />
-            <div id="sctLearn" class="featureTitle">Sharding</div>
+            <div>
+                <div class="featureItemTitle">Sharding</div>
+                <div class="featureItemDesc">
+                    Sharding allows you to separate your data onto multiple database servers. 
+                    This is essential for load-sharing on high-volume systems, but it can also improve global performance by using regional data centers.
+                    ArgentSea was designed to support sharded data (although sharding is definately not required).
+                    Multi-threaded queries can combine data across multiple shards, or return the first valid result.
+                    Shard-aware objects make working with unique shard records as simple as working with non-sharded data.
+                </div>
+            </div>
         </div>
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/mapping.svg" />
-            <div id="sctConnect" class="featureTitle">Mapping</div>
+            <div>
+                <div class="featureItemTitle">Mapping</div>
+                <div class="featureItemDesc">
+                    By adding attributes to your model classes, you can automatically map a property to a parameter or resultset column.
+                    The Mapper maps nullable types to/from Db Null values (or alternatively maps Guid.Empty and NaN to Db Null).
+                    The Mapper supports Enums and automatically converts to/from their base types.
+                    Tha Mapper also supports complex child objects, including lists and 1:1 child objects.
+                    By using Expression Trees exclusively, the Mapper offers hand-coded performance without all the labor of actually coding the ADO.Net mappings (and no reflection overhead).
+                </div>
+            </div>
         </div>
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/properties.svg" />
-            <div id="sctSchedule" class="featureTitle">Configuration</div>
+            <div>
+                <div class="featureItemTitle">Configuration</div>
+                <div class="featureItemDesc">
+                    ArgentSea moves configuration into the 21st century by abandoning connection strings.
+                    You still have access to all provider connection parameters.
+                    By fully implementing the .NET core configuration architecture, you can store connection information data appropriately.
+                    For example, you could store your server name in an environment varible, the database name in a configuration value, and your passwords in a Key Vault or User secrets.
+                    This simplifies managing configuration and deployments in all environments and improves security.
+                </div>
+            </div>
         </div>
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/resilience.svg" />
-            <div id="sctSchedule" class="featureTitle">Resilience</div>
+            <div>
+                <div class="featureItemTitle">Resilience</div>
+                <div class="featureItemDesc">
+                    ArgentSea uses <a href="http://www.thepollyproject.org/">Polly</a> to orchestrate automatic retries on transient errors.
+                    On persistant failures, Polly allow allows “circuit breaking” so that failures don’t cause backlogged queues to overwhelm downstream servers.
+                    If ArgentSea is deployed in a globally distributed implementation, it also is smart enough to detect read failures that may be due to synchronization latency
+                    and automatically retry using the master connection.
+                </div>
+            </div>
         </div>
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/performance.svg" />
-            <div id="sctSchedule" class="featureTitle">Performance</div>
+            <div>
+                <div class="featureItemTitle">Performance</div>
+                <div class="featureItemDesc">
+                    ArgentSea is writen with performance in mind. It assumes the use of optimized stored procedures for all database activity.
+                    The mapping component uses Expression Trees, so it offers native-code performance for all mapped activity.
+                    Shard queries are multi-threaded, for simultaneous access across multiple shards. If you are looking only for one result, you don’t even have to wait for all the shard queries to finish.
+                </div>
+            </div>
         </div>
-        <div class="featureSection">
+        <div class="featureItem">
             <img class="featureIcon" src="images/tooling.svg" />
-            <div id="sctSchedule" class="featureTitle">Tooling</div>
+            <div>
+                <div class="featureItemTitle">Tooling</div>
+                <div class="featureItemDesc">
+                    Robust, high-performance logging in ArgentSea allows support and troubleshooting teams to see rich process information.
+                    This includes the code that is generated by the mapper’s Expression Trees.
+                    Any implementation of ILogger can be used.
+                    ArgentSea allow includes a separate desktop application that can further reduced coding labor by automatically creating
+                    read/insert/update/delete stored procedures from tables and also model classes (with attributes) from stored procedures.
+                </div>
+            </div>
         </div>
+
     </div>
     <hr />
-    <div class="paradigmTitle">Supported databases</div>
+    <div class="sectionTitle">Supported databases</div>
     <div class="homeContentSections">
         <div class="homeContentSection">
             <img class="dbIcon" src="images/sql-server-h.svg" />
@@ -71,7 +125,7 @@
     </div>
     <hr />
     <div class="paradigm">
-        <div class="paradigmTitle">Paradigm Shifty</div>
+        <div class="sectionTitle">Paradigm Shifty</div>
         <div class="paradigmSections">
             <div class="paradigmSection">
                 <div class="paradigmGroup">
@@ -79,7 +133,7 @@
                     <div>
                         <div class="homeContentTitle">Tight Coupling</div>
                         <div class="homeContentItem">
-                                Although it might sound nice, “tight coupling” isn’t a good thing in software design. It happens when one system’s integration with another system depends on the internal implementation of the other system. Usually the result of haphazard design, it make it nearly impossible to switch to a different provider.
+                            Although it might sound nice, “tight coupling” isn’t a good thing in software design. It happens when one system’s integration with another system depends on the internal implementation of the other system. Usually the result of haphazard design, it makes it nearly impossible to switch to a different provider.
                             <p>
                                 Like, say, when accessing your database layer depends upon how tables and columns are implemented.
                             </p>
@@ -93,34 +147,33 @@
                     <div>
                         <div id="sctLearn" class="homeContentTitle">Loose Coupling</div>
                         <div class="homeContentItem">
-                                “Loosely coupled” systems have well-defined interfaces. You can change the implementation as long as you maintain the interface contract.
+                            “Loosely coupled” systems have well-defined interfaces. You can change the implementation as long as you maintain the interface contract.
                             <p>
                                 These systems are more robust, testable, and manageable — and those are good things.
                             </p><p>
                                 For example, using stored procedures allows you to change the underlying database structures, but as long as the same results are returned you will not break the application.
                             </p>
                         </div>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         <div id="sprocTitle">Stored procedures</div>
         <div id="sprocDesc">
-                Stored procedures enable loose coupling between the app domain and the data domain. They generally perform better and offer better security too.
-                This is why ArgentSea was built to work with stored procedures.
+            Stored procedures enable loose coupling between the app domain and the data domain. They generally perform better and offer better security too.
+            This is why ArgentSea was built to work with stored procedures.
             <p>
                 Do data-domain work in SQL and your application work in .NET. That is how you build a maintainable high-performance application. (If you prefer to work in C# and have your ORM handle data for you automagically, there are several other great options for you).
             </p>
         </div>
     </div>
     <hr />
-    <div class="paradigmTitle">What’s new</div>
+    <div class="sectionTitle">Status</div>
     <div class="whatsNew">
         <ul>
-            <li>The ArgentSea library is in alpha phase.</li>
-            <li>Building documentation.</li>
-            <li>All current tests are passing.</li>
-            <li>More tests are needed.</li>
+            <li>The ArgentSea library is in alpha phase, which means that objects definitions could still change.</li>
+            <li>Currently working on building documentation, desktop tooling, and NuGet package pipeline.</li>
+            <li>All current tests are passing, but more tests are needed.</li>
         </ul>
     </div>
     <div id="footer">
