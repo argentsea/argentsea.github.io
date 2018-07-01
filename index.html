@@ -13,7 +13,7 @@
 <body>
     <div class="navbar">
         <div class="navLogo"><a href="http://www.argentsea.com/index.html"><img id="menuLogo" src="images/argentsealogo-white.svg" /></a></div>
-        <div class="navitem"><a href="/faq.htm">FAQs</a></div>
+        <div class="navitem"><a href="/faq.html">FAQs</a></div>
         <div class="navitem"><a href="http://docs.argentsea.com">Docs</a></div>
         <div class="navitem"><a href="https://www.github.com/argentsea/">Source</a></div>
         <!--div class="navitem"><a href="http://www.compte.com">Blog</a></div-->
@@ -24,9 +24,19 @@
         </div>
         <div id="headingTitle"><img id="headingAsLogo" src="images/argentsealogo-gray.svg" /></div>
     </div>
-    <div id="headingTag">Argent Sea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
-    <div id="headingDescription">Argent Sea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
+    <!-- -->
+    <div id="headingTag">ArgentSea is a free, open source .NET framework for accessing databases, built for simplicity, high-performance and global scale.</div>
+    <div id="headingDescription">ArgentSea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
     <div style="height:25px"></div>
+    <!-- -->
+    <div id="tagParent">
+        <div class="centerSides"></div>
+        <div Id="tagLine">
+            ArgentSea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.
+        </div>
+        <div class="centerSides"></div>
+    </div>
+    <hr />
     <div class="sectionTitle">Features</div>
     <div class="featureSections">
         <div class="featureItem">
@@ -34,7 +44,7 @@
             <div>
                 <div class="featureItemTitle">Sharding</div>
                 <div class="featureItemDesc">
-                    Sharding allows you to separate your data onto multiple database servers. 
+                    Sharding allows you to separate your data onto multiple database servers.
                     This is essential for load-sharing on high-volume systems, but it can also improve global performance by using regional data centers.
                     ArgentSea was designed to support sharded data (although sharding is definately not required).
                     Multi-threaded queries can combine data across multiple shards, or return the first valid result.
@@ -61,7 +71,7 @@
                 <div class="featureItemTitle">Configuration</div>
                 <div class="featureItemDesc">
                     ArgentSea moves configuration into the 21st century by abandoning connection strings.
-                    You still have access to all provider connection parameters.
+                    You still have access to all provider connection parameters (and can also create connection strings when you need them).
                     By fully implementing the .NET core configuration architecture, you can store connection information data appropriately.
                     For example, you could store your server name in an environment varible, the database name in a configuration value, and your passwords in a Key Vault or User secrets.
                     This simplifies managing configuration and deployments in all environments and improves security.
@@ -74,7 +84,7 @@
                 <div class="featureItemTitle">Resilience</div>
                 <div class="featureItemDesc">
                     ArgentSea uses <a href="http://www.thepollyproject.org/">Polly</a> to orchestrate automatic retries on transient errors.
-                    On persistant failures, Polly allow allows “circuit breaking” so that failures don’t cause backlogged queues to overwhelm downstream servers.
+                    On persistant failures, Polly allow allows “circuit breaking” so that failures don’t cause backlogged processes to overwhelm the request queue.
                     If ArgentSea is deployed in a globally distributed implementation, it also is smart enough to detect read failures that may be due to synchronization latency
                     and automatically retry using the master connection.
                 </div>
@@ -133,7 +143,7 @@
                     <div>
                         <div class="homeContentTitle">Tight Coupling</div>
                         <div class="homeContentItem">
-                            Although it might sound nice, “tight coupling” isn’t a good thing in software design. It happens when one system’s integration with another system depends on the internal implementation of the other system. Usually the result of haphazard design, it makes it nearly impossible to switch to a different provider.
+                            Although it might sound cozy, “tight coupling” isn’t a good thing in software design. It happens when one system’s integration with another system depends on the internal implementation of the other system. Usually the result of haphazard design, it makes it nearly impossible to switch to a different provider.
                             <p>
                                 Like, say, when accessing your database layer depends upon how tables and columns are implemented.
                             </p>
@@ -163,7 +173,7 @@
             Stored procedures enable loose coupling between the app domain and the data domain. They generally perform better and offer better security too.
             This is why ArgentSea was built to work with stored procedures.
             <p>
-                Do data-domain work in SQL and your application work in .NET. That is how you build a maintainable high-performance application. (If you prefer to work in C# and have your ORM handle data for you automagically, there are several other great options for you).
+                Do your data-domain work in SQL and your application work in .NET. That is how you build a maintainable high-performance application. (If you prefer to work in C# and have your ORM handle data for you automagically, there are several other great options for you).
             </p>
         </div>
     </div>
@@ -171,15 +181,14 @@
     <div class="sectionTitle">Status</div>
     <div class="whatsNew">
         <ul>
-            <li>The ArgentSea library is in alpha phase, which means that objects definitions could still change.</li>
+            <li>The ArgentSea library is in alpha phase, which means that object definitions could still change.</li>
+            <li>The core functionality has been shown to work. All current tests are passing, but more tests are needed.</li>
             <li>Currently working on building documentation, desktop tooling, and NuGet package pipeline.</li>
-            <li>All current tests are passing, but more tests are needed.</li>
         </ul>
     </div>
     <div id="footer">
         <p>
-            ArgentSea ©2018 John Hicks
-        </p><p>
+            ArgentSea ©2018 John Hicks <br />
             ArgentSea is available for use and modification under the MIT License.
         </p>
     </div>

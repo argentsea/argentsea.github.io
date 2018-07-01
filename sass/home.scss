@@ -81,9 +81,9 @@ hr {
 }
 #headingDescription {
     background-color: black;
-    color: #A0A0A0;
+    color: gainsboro;
     text-align: center;
-    font-size: .9rem;
+    font-size: 1.1rem;
     padding-bottom: 15px;
 }
 #headingTag {
@@ -91,8 +91,8 @@ hr {
     top: 200px;
     left: 50%;
     width: 50%;
-    color: #A0A0A0;
-    font-size: .9rem;
+    color: gainsboro;
+    font-size: 1.1rem;
     display: none;
 }
 .bottomPage {
@@ -103,6 +103,21 @@ hr {
     flex-shrink: 0;
     align-self: flex-end;
     position: relative;
+}
+#tagParent {
+    display: flex;
+    flex-direction: row;
+}
+
+#tagLine {
+    max-width: 600px;
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid black;
+}
+.centerSides {
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .featureSections {
@@ -180,6 +195,7 @@ featureSection {
 .homeContentItem {
     color: black;
     padding: 3px;
+    font-size: 1rem;
 }
 
 .homePic {
@@ -241,8 +257,10 @@ featureSection {
 
 #footer {
     background-color: black;
-    color: dimgray;
+    color: lightgray;
     font-size: .8rem;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .whatsNew {
     //width: 60%;
@@ -267,7 +285,7 @@ featureSection {
         padding: 30px;
     }
 }
-@media (min-width: 980px) {
+@media (min-width: 800px) {
     #headingDescription {
         display: none;
     }

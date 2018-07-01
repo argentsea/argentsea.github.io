@@ -1,6 +1,6 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
   <title>Sharding</title>
-  <rect width="612" height="612" rx="68.5" ry="68.5" fill="darkblue"/>
+  <rect width="612" height="612" rx="68.5" ry="68.5" fill="black"/>
   <g>
     <path d="M380.74,59.11c0-6.06,19.66-11,43.91-11s43.91,4.92,43.91,11-19.66,11-43.91,11-43.91-4.92-43.91-11Z" transform="translate(0.14)" fill="#fff" fill-rule="evenodd"/>
     <path d="M380.74,62.25c0,6.07,19.66,11,43.91,11s43.91-4.92,43.91-11v87.19c0,6.06-19.66,11-43.91,11s-43.91-4.92-43.91-11Z" transform="translate(0.14)" fill="#fff" fill-rule="evenodd"/>
