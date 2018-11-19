@@ -77,9 +77,9 @@ hr {
 
 #headingTag {
   position: absolute;
-  top: 200px;
+  top: 230px;
   left: 50%;
-  width: 50%;
+  width: 45%;
   color: gainsboro;
   font-size: 1.1rem;
   display: none; }
@@ -179,6 +179,45 @@ featureSection {
   color: dimgray;
   padding-bottom: 10px; }
 
+.horizon {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  overflow: hidden; }
+
+.horizonSide {
+  min-height: 400px;
+  max-height: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative; }
+
+.horizonSide2 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
+
+.horizonCenter {
+  position: relative;
+  height: 400px;
+  width: 680px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow-x: hidden; }
+
+.horizonCenter > svg {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.horizonCenter > img {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .paradigm {
   padding: 5px; }
 
@@ -257,4 +296,3 @@ featureSection {
     display: none; }
   #headingTag {
     display: block; } }
-

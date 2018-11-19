@@ -25,9 +25,56 @@
         <!--div class="navitem"><a href="http://www.compte.com">Blog</a></div-->
     </div>
     <div id="heading">
-        <div id="headingLogo">
-            <img src="images/ArgentSea.jpg" />
-        </div>
+        <div class="horizon">
+            <div class="horizonSide">
+                <div class="horizonSide2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="400px" width="100%" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="horizonL" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#fff" stop-opacity="0.3" />
+                                <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="fadeL">
+                                <stop offset="0.1" stop-color="#000000" />
+                                <stop offset="0.9" stop-color="#000000" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <rect y="246" width="100%" height="40" fill="url(#horizonL)" />
+                        <rect width="100%" height="400" fill="url(#fadeL)" />
+                    </svg>
+                </div>
+                </div>
+                <div class="horizonCenter">
+                    <img src="images/argentsea-home.jpg" />
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="400" width="680">
+                        <defs>
+                            <linearGradient id="horizonC" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#fff" stop-opacity="0.3" />
+                                <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <rect y="246" width="680" height="40" fill="url(#horizonC)" />
+                    </svg>
+                </div>
+                <div class="horizonSide">
+                    <div class="horizonSide2">
+                        <svg class="horizonSide2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="400px" width="100%" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="horizonR" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" stop-color="#fff" stop-opacity="0.3" />
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                                </linearGradient>
+                                <linearGradient id="fadeR">
+                                    <stop offset="0.1" stop-color="#000000" stop-opacity="0" />
+                                    <stop offset="0.9" stop-color="#000000" />
+                                </linearGradient>
+                            </defs>
+                            <rect y="246" width="100%" height="40" fill="url(#horizonR)" />
+                            <rect width="100%" height="400" fill="url(#fadeR)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
         <div id="headingTitle"><img id="headingAsLogo" src="images/argentsealogo-gold.svg" /></div>
     </div>
     <!-- -->
@@ -68,7 +115,7 @@
                     The Mapper maps nullable types to/from Db Null values (or alternatively maps Guid.Empty and NaN to Db Null).
                     The Mapper supports Enums and automatically converts to/from their base types or names.
                     Tha Mapper also supports complex child objects, including lists and 1:1 child objects.
-                    By using Expression Trees exclusively, the Mapper offers hand-coded performance without all the labor of actually coding the ADO.Net mappings (and no reflection overhead).
+                    By using Expression Trees exclusively, the Mapper offers hand-coded performance without all the labor of actually coding the ADO.Net mappings — and no reflection overhead.
                 </div>
             </div>
         </div>
@@ -77,11 +124,9 @@
             <div>
                 <div class="featureItemTitle">Configuration</div>
                 <div class="featureItemDesc">
-                    ArgentSea moves configuration into the 21st century by abandoning connection strings.
-                    You still have access to all provider connection parameters (and you can create connection strings when you need them).
-                    By fully implementing the .NET core configuration architecture, you can store connection information data appropriately.
-                    For example, you could store your server name in an environment variable, the database name in a configuration value, and your passwords in a Key Vault or User secrets.
-                    This improves security and simplifies managing configuration and deployments across environments.
+                    ArgentSea moves configuration into the 21st century with “configuration inheritance”, which is essential for efficiently managing a potentially large number of shard connections.
+                    By fully implementing the .NET Core configuration architecture, you can flexibly manage connection attributes across the most appropriate metadata store.
+                    For example, storing data server names in an environment variable, and passwords in a secure secrets store, improves security and allows deployments across environments without messy config file transformations.
                 </div>
             </div>
         </div>
