@@ -81,16 +81,6 @@
     <div id="headingTag">ArgentSea is a free, open source .NET framework for accessing databases, built for simplicity, high-performance and global scale.</div>
     <div id="headingDescription">ArgentSea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.</div>
     <div style="height:25px"></div>
-    <!-- 
-    <div id="tagParent">
-        <div class="centerSides"></div>
-        <div Id="tagLine">
-            ArgentSea is a free, open source .NET framework for accessing databases,<br />built for simplicity, high-performance and global scale.
-        </div>
-        <div class="centerSides"></div>
-    </div>
-    <hr />
-        -->
     <div class="sectionTitle">Features</div>
     <div class="featureSections">
         <div class="featureItem">
@@ -98,11 +88,10 @@
             <div>
                 <div class="featureItemTitle">Sharding</div>
                 <div class="featureItemDesc">
-                    Sharding allows you to separate your data onto multiple database servers.
-                    This is essential for load-sharing on high-volume systems, but it can also improve global performance by using regional data centers.
-                    ArgentSea was designed to support sharded data (although sharding is definitely not required).
-                    Multi-threaded queries can combine data across multiple shards, or return the first valid result.
-                    Shard-aware objects make working with unique shard records as simple as working with non-sharded data.
+                    <i>Sharding</i> is the technique of distributing your data across multiple database servers.
+                    This is the most cost-effective way to manage growth on high-volume systems.
+                    It also enables regionally distributed data, for performance or for privacy compliance.
+                    Sharding can be complex to implement, but ArgentSea offers the tools and patterns to make it nearly as easy as working with non-sharded data.
                 </div>
             </div>
         </div>
@@ -111,11 +100,10 @@
             <div>
                 <div class="featureItemTitle">Mapping</div>
                 <div class="featureItemDesc">
+                    Mapping allows you to read or write to a database while writing very little code.
                     By adding attributes to your model classes, you can automatically map a property to a parameter or resultset column.
-                    The Mapper maps nullable types to/from Db Null values (or alternatively maps Guid.Empty and NaN to Db Null).
-                    The Mapper supports Enums and automatically converts to/from their base types or names.
-                    Tha Mapper also supports complex child objects, including lists and 1:1 child objects.
-                    By using Expression Trees exclusively, the Mapper offers hand-coded performance without all the labor of actually coding the ADO.Net mappings — and no reflection overhead.
+                    The Mapper maps nullable types to/from Db Null values, handles Enum values, and supports complex child objects, including lists and child objects.
+                    Most importantly, the Mapper is fast — as fast as laboriously hand-optimized code, but much easier to maintain.
                 </div>
             </div>
         </div>
@@ -124,9 +112,9 @@
             <div>
                 <div class="featureItemTitle">Configuration</div>
                 <div class="featureItemDesc">
-                    ArgentSea moves configuration into the 21st century with “configuration inheritance”, which is essential for efficiently managing a potentially large number of shard connections.
-                    By fully implementing the .NET Core configuration architecture, you can flexibly manage connection attributes across the most appropriate metadata store.
-                    For example, storing data server names in an environment variable, and passwords in a secure secrets store, improves security and allows deployments across environments without messy config file transformations.
+                    ArgentSea’s unique “configuration inheritance” architecture dramatically simplifies working with multiple data connections. 
+                    This is essential for managing shards, but also for just scaling out read connections to standby/mirrored endpoints. 
+                    By fully embracing the .NET Core configuration architecture, ArgentSea offers incredible flexibility, improved security, and deployments without messy file transformations.
                 </div>
             </div>
         </div>
@@ -136,8 +124,8 @@
                 <div class="featureItemTitle">Resilience</div>
                 <div class="featureItemDesc">
                     ArgentSea automatically retries database commands that fail due to transient errors. 
-                    You have per connection control over when, and how many, retries should be attempted.
-                    On persistent failures, “circuit breaking” means that failures don’t cause backlogged processes to overwhelm the request queue — this may keep a server alive, even if a data connection is down.
+                    You have detailed control over how often and how many retries should be attempted. 
+                    On persistent failures, “circuit breaking” this may keep a server alive, even if a data connection is down.
                 </div>
             </div>
         </div>
@@ -146,9 +134,10 @@
             <div>
                 <div class="featureItemTitle">Performance</div>
                 <div class="featureItemDesc">
-                    ArgentSea is written with performance in mind. It assumes the use of optimized stored procedures for all database activity.
+                    ArgentSea is written with performance in mind. The use of stored procedures optimizes data access by reducing compilation overhead, 
+                    makes it easier to tune the database, and helps reduce the number of database server round-trips.
                     The mapping component uses Expression Trees, so it offers native-code performance for all mapped activity.
-                    Shard queries are multi-threaded, for simultaneous access across multiple shards. If you are looking only for one result, you don’t even have to wait for all the shard queries to finish.
+                    Shard queries are multi-threaded, for simultaneous access across multiple shards.
                 </div>
             </div>
         </div>
@@ -181,6 +170,7 @@
             <img class="dbIcon" src="images/postgresql-h.svg" />
             <div class="homeContentItem">• PostgreSQL database</div>
             <div class="homeContentItem">• Amazon RDS for PostgreSQL</div>
+            <div class="homeContentItem">• Amazon Aurora</div>
             <div class="homeContentItem">• Azure Database for PostgreSQL</div>
             <div class="homeContentItem">• Google Cloud Sql for PostgreSQL</div>
         </div>
