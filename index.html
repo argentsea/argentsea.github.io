@@ -15,6 +15,7 @@
     <meta property="og:title" content="ArgentSea" />
     <meta property="og:description" content="ArgentSea is a .NET open source framework for accessing databases, built for simplicity, high-performance, and global scale." />
     <meta property="og:type" content="website" />
+    <meta name="viewport" content="width=device-width, intial-scale:1.0" />
 </head>
 <body>
     <div class="navbar">
@@ -84,9 +85,11 @@
     <div class="sectionTitle">Features</div>
     <div class="featureSections">
         <div class="featureItem">
-            <img class="featureIcon" src="images/sharding.svg" />
+            <a href="https://docs.argentsea.com/tutorials/Sharding/sharding.html">
+                <img class="featureIcon" src="images/sharding.svg" />
+            </a>
             <div>
-                <div class="featureItemTitle">Sharding</div>
+                <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Sharding/sharding.html">Sharding</a></div>
                 <div class="featureItemDesc">
                     <i>Sharding</i> is the technique of distributing your data across multiple database servers.
                     This is the most cost-effective way to manage growth on high-volume systems.
@@ -96,9 +99,11 @@
             </div>
         </div>
         <div class="featureItem">
-            <img class="featureIcon" src="images/mapping.svg" />
+            <a href="https://docs.argentsea.com/tutorials/Mapping/mapping.html">
+                <img class="featureIcon" src="images/mapping.svg" />
+            </a>
             <div>
-                <div class="featureItemTitle">Mapping</div>
+                <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Sharding/mapping.html">Mapping</a></div>
                 <div class="featureItemDesc">
                     Mapping allows you to read or write to a database while writing very little code.
                     By adding attributes to your model classes, you can automatically map a property to a parameter or resultset column.
@@ -108,33 +113,39 @@
             </div>
         </div>
         <div class="featureItem">
-            <img class="featureIcon" src="images/properties.svg" />
+            <a href="https://docs.argentsea.com/tutorials/Configuration/configuration.html">
+                <img class="featureIcon" src="images/properties.svg" />
+            </a>
             <div>
-                <div class="featureItemTitle">Configuration</div>
+                <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Configuration/configuration.html">Configuration</a></div>
                 <div class="featureItemDesc">
-                    ArgentSea’s unique “configuration inheritance” architecture dramatically simplifies working with multiple data connections. 
-                    This is essential for managing shards, but also for just scaling out read connections to standby/mirrored endpoints. 
+                    ArgentSea’s unique “configuration inheritance” architecture dramatically simplifies working with multiple data connections.
+                    This is essential for managing shards, but also for just scaling out read connections to standby/mirrored endpoints.
                     By fully embracing the .NET Core configuration architecture, ArgentSea offers incredible flexibility, improved security, and deployments without messy file transformations.
                 </div>
             </div>
         </div>
         <div class="featureItem">
-            <img class="featureIcon" src="images/resilience.svg" />
+            <a href="https://docs.argentsea.com/tutorials/Configuration/resilience.html">
+                <img class="featureIcon" src="images/resilience.svg" />
+            </a>
             <div>
-                <div class="featureItemTitle">Resilience</div>
+                <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Configuration/resilience.html">Resilience</a></div>
                 <div class="featureItemDesc">
-                    ArgentSea automatically retries database commands that fail due to transient errors. 
-                    You have detailed control over how often and how many retries should be attempted. 
+                    ArgentSea automatically retries database commands that fail due to transient errors.
+                    You have detailed control over how often and how many retries should be attempted.
                     On persistent failures, “circuit breaking” this may keep a server alive, even if a data connection is down.
                 </div>
             </div>
         </div>
         <div class="featureItem">
-            <img class="featureIcon" src="images/performance.svg" />
+            <a href="https://docs.argentsea.com/tutorials/Querying/querying.html">
+                <img class="featureIcon" src="images/performance.svg" />
+            </a>
             <div>
-                <div class="featureItemTitle">Performance</div>
+                <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Querying/querying.html">Performance</a></div>
                 <div class="featureItemDesc">
-                    ArgentSea is written with performance in mind. The use of stored procedures optimizes data access by reducing compilation overhead, 
+                    ArgentSea is written with performance in mind. The use of stored procedures optimizes data access by reducing compilation overhead,
                     makes it easier to tune the database, and helps reduce the number of database server round-trips.
                     The mapping component uses Expression Trees, so it offers native-code performance for all mapped activity.
                     Shard queries are multi-threaded, for simultaneous access across multiple shards.
@@ -146,16 +157,16 @@
             <div>
                 <div class="featureItemTitle">Tooling</div>
                 <div class="featureItemDesc">
-                    Robust, high-performance logging provides monitoring insight into the library behavior, performance, and operational problems.
+                    Robust, high-performance <a href="https://docs.argentsea.com/tutorials/Mapping/logging.html">logging</a> 
+                    provides monitoring insight into the library behavior, performance, and operational problems.
                     This includes the code that is generated by the mapper’s Expression Trees.
-                    Log to <a href="https://azure.microsoft.com/Services/App_Insights">Application Insights</a>, 
+                    Log to <a href="https://azure.microsoft.com/Services/App_Insights">Application Insights</a>,
                     <a href="https://aws.amazon.com/cloudwatch">Amazon CloudWatch</a>, Windows, or any .NET logging solution.
                     ArgentSea also includes a separate desktop application that can further reduce coding labor by automatically creating
                     read/insert/update/delete stored procedures from tables and also model classes (with attributes) from stored procedures.
                 </div>
             </div>
         </div>
-
     </div>
     <hr />
     <div class="sectionTitle">Supported databases</div>
