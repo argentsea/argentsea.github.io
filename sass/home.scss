@@ -26,7 +26,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
     background-color: black;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid dimgray;
     color: white;
     padding-bottom: 8px;
 }
@@ -139,6 +139,12 @@ hr {
     font-weight: bold;
     color: black;
 }
+
+.featureItemTitle > a {
+    text-decoration: none;
+    color: black;
+}
+
 .featureItemDesc {
 //
 }
@@ -227,10 +233,10 @@ featureSection {
 }
 .horizonSide2 {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .horizonCenter {
     position: relative;
@@ -301,7 +307,7 @@ featureSection {
 #footer {
     background-color: black;
     color: lightgray;
-    font-size: .8rem;
+    font-size: .9rem;
     padding-left: 50px;
     padding-right: 50px;
 }
