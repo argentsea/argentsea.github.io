@@ -95,9 +95,9 @@
             for applications that do not require data scaling.
         </p>
         <p>
-            Now, version 2.0 of ArgentSea has been enhanced to work with Microsoft Orleans. Uniuqely, amoung Orlenas data providers, 
+            <b>Now, version 2.0 of ArgentSea has been enhanced to work as provider for Microsoft Orleans!</b> Uniuqely, amoung Orlenas data providers, 
             ArgentSea can both manange data shards or tenants behind a single cluster and read/write Orleans data in 3rd-normal-form SQL tables. 
-            This combination offers the transactional power of the Microsoft Orleans actor framework with the ability to search, query, and agregate SQL data.
+            This combination uniquely offers the transactional power of the Microsoft Orleans actor framework with the ability to search, query, and agregate SQL data.
         </p>
     </div>
     <hr />
@@ -110,10 +110,14 @@
             <div>
                 <div class="featureItemTitle"><a href="https://docs.argentsea.com/tutorials/Sharding/sharding.html">Sharding / Tenanting</a></div>
                 <div class="featureItemDesc">
-                    <i>Sharding</i> is the technique of distributing your data across multiple database servers.
-                    This is the most cost-effective way to manage high-performance growth on high-volume systems.
-                    Sharding can be complex to implement, but ArgentSea offers the tools and patterns to make it nearly as easy as working with non-sharded data.
-                    <i>Tenanting</i> ensures that each cloud customer’s data is written to a distinct database, ensuring each customer secure access, SLAs, and security.
+                    <p>
+                        <i>Sharding</i> is the technique of distributing your data across multiple database servers.
+                        This is the most cost-effective way to manage high-performance growth on high-volume systems.
+                        Sharding can be complex to implement, but ArgentSea offers the tools and patterns to make it nearly as easy as working with non-sharded data.
+                    </p>
+                    <p>
+                        <i>Tenanting</i> ensures that each cloud customer’s data is written to a distinct database, ensuring each customer secure access, managable SLAs, and simple decommissioning.
+                    </p>
                 </div>
             </div>
         </div>
@@ -210,9 +214,7 @@
     <div class="whatsNew">
         <ul>
             <li>The library is available on NuGet for <a href="https://www.nuget.org/packages/ArgentSea.Sql/">Sql Server</a> and <a href="https://www.nuget.org/packages/ArgentSea.Pg/">PostgreSQL</a>.</li>
-            <li>The ArgentSea library is in pre-release. Further changes will depend upon feedback and findings from users.</li>
-            <li>All current tests are passing, but more tests are needed.</li>
-            <li>Desktop tooling is on hold.</li>
+            <li>Version 1.0 of ArgentSea has been used in production for years and has handled billions of dollars in transactions. Version 2.0 has just been released.</li>
         </ul>
     </div>
     <div id="footer">
